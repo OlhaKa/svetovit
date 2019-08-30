@@ -1,0 +1,114 @@
+@media (max-width: 1199.98px) {
+  header .menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    z-index: 2;
+    background: rgba(0, 58, 116, 0.95);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      max-width: 960px;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin: 15px auto 5px;
+
+      .menu-item {
+        width: max-content;
+
+        & > a {
+          padding: 0 15px 0 0;
+          display: block;
+          margin: 5px 5px 20px;
+        }
+
+        ul {
+          display: none;
+          position: static;
+          height: auto;
+          background: transparent;
+          box-shadow: none;
+          padding-left: 20px;
+          margin-top: -15px;
+          a {
+            color: #FFFFFF;
+
+          }
+        }
+        &.withSubmenu {
+          & > a {
+            &:after {
+              top: 12px;
+            }
+            &.opened {
+              &:after {
+                background: url("../media/up-arrow.svg") no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact_line .container {
+    flex-direction: column;
+    padding: 40px 0;
+    .sweep-to-right {
+      margin: 30px 0;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  header .menu-item {
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      background: #98ECFF;
+      height: 1px;
+      width: 100%;
+      transform-origin: center;
+      transform: scaleX(0);
+      transition: .2s;
+    }
+
+    &:hover {
+      a {
+        color: #98ECFF;
+      }
+
+      & > ul {
+        height: auto !important;
+        padding: 20px 40px;
+        z-index: 3;
+      }
+
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
