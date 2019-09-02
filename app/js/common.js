@@ -1,19 +1,38 @@
 $(document).ready(function () {
 
     $('.banner-slider').owlCarousel({
+        autoplay:true,
         items: 1,
         loop: true,
         animateOut: 'fadeOut',
         stagePadding: 0,
-        autoHeight: true
+        dots: false,
+        autoHeight: true,
+        responsive : {
+
+            768 : {
+               dots: true
+            }
+        }
     });
 
     $('.certificates').owlCarousel({
-        items: 3,
+
         loop: true,
         nav: true,
         dots: false,
         margin: 15,
+        responsive : {
+            0 : {
+                items: 1,
+                autoHeight: false,
+                singleItem:true
+                // autoWidth: true
+            },
+            576 : {
+                items: 3,
+            }
+        }
     });
 
     $(".current-year").text((new Date).getFullYear());
@@ -92,6 +111,7 @@ $(document).ready(function () {
 
     $('#burger').click(function(){
         $(this).toggleClass('open');
+        $('.menu').toggleClass('show')
     });
 });
 

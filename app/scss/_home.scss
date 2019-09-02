@@ -233,15 +233,6 @@
 }
 
 .about-us {
-  background: $common-blue;
-  background: linear-gradient(
-                  to bottom,
-                  #ffffff,
-                  #ffffff 80px,
-                  #003A74 80px,
-                  #003A74
-  );
-
   .col-md-4 {
     padding-bottom: 40px;
     display: flex;
@@ -254,8 +245,7 @@
   }
 
   .col-head {
-    color: $common-blue;
-    min-height: 80px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,7 +286,7 @@
     background: $blue;
 
     .col-head {
-      background: $blue;
+
       color: #FFFFFF;
     }
 
